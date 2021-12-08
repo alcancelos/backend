@@ -1,0 +1,899 @@
+/*Variables globales*/
+:root{
+    --ColorFav: rgb(9, 9, 151);
+}
+
+/* Body */
+body{
+    background-color: rgb(184, 188, 204);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Caja principal de tamaño 800pixeles */
+#Contenido{
+    background-color: rgb(139, 223, 235);    
+    padding-top: 0px;
+    width: 800px;  
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    border:2px solid black;    
+}
+
+/*            HEADER                       */
+/* --------------------------------------- */
+
+header{
+  background-color: rgb(9, 9, 151);
+  height: 80px;
+}
+
+header h1{
+  color: aliceblue;
+  font-size: 2.5em;
+  font-style: italic;
+  font-weight: 100;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+}
+
+header img.Logo{
+  width: 100px;
+}
+
+/*            Barra de navegacion          */
+/* --------------------------------------- */
+nav {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 18px;
+    background-color: var(--ColorFav);
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    box-sizing: border-box;
+    height: 30px;  
+    padding-top: 4px; 
+    padding-bottom: 4px;
+    border-bottom: 1px solid black; 
+    /* Gradiente de la barra de navegacion*/
+    background: #090997; /* Old browsers */
+    background: -moz-linear-gradient(top,  #090997 0%, #00dddd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #090997 0%,#00dddd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #090997 0%,#00dddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090997', endColorstr='#00dddd',GradientType=0 ); /* IE6-9 */
+}
+
+nav a{
+    color: aliceblue;
+    font-style: normal;
+    text-decoration: none;
+    transition:all 0.3s ease;   
+    padding-left: 8px;
+    padding-right: 8px; 
+}
+
+nav a:hover{
+    color: rgb(63, 46, 22);
+    background-color: rgb(115, 248, 241);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+    text-shadow: none;
+    /* Sombra de los botones */
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    /* Gradiente */
+    background: #73f8f1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #73f8f1 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #73f8f1 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #73f8f1 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73f8f1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.Activo{
+  color: #a8a9f5;
+  padding: 4px;
+  border-radius: 10px;
+  text-shadow: 6px 2px 7px rgba(0,0,0,0.95);
+}
+
+/* El boton del Dropdown menu esta oculto por defecto */
+.dropbtn{
+    display: none;
+}
+
+/*     Pie de Página            */
+/* ---------------------------- */
+footer{
+    background-color: var(--ColorFav);    
+    clear: both;
+    color: aliceblue;
+    padding: 0.5em 0;
+    margin-top: 1em;
+    text-align: center;
+    border-top: #000000 2px solid;
+    /* Gradiente del footer */
+    background: #5f74af; /* Old browsers */
+    background: -moz-linear-gradient(top,  #5f74af 0%, #090997 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #5f74af 0%,#090997 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #5f74af 0%,#090997 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f74af', endColorstr='#090997',GradientType=0 ); /* IE6-9 */
+}
+
+/*    Main                      */
+/* ---------------------------- */
+main{
+  box-sizing: border-box;
+  width: 100%; 
+  text-align: center;
+  position: relative;
+}
+
+main .intro{
+  background-image: url(../img/fondo.jpg);
+  padding: 10px;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+h3{
+  color: #090997;
+}
+
+img.ImagenTarjeta{
+  width: 100%;
+}
+
+.Bienvenidos{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+
+.Bienvenidos h3{
+  color: #090997;
+}
+
+.ImagenBienvenidos{
+  width: 50%;
+  float: right;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  filter: drop-shadow(-12px 14px 9px #000000);
+  -webkit-filter: drop-shadow(-12px 14px 9px #000000);
+  -moz-filter: drop-shadow(-12px 14px 9px #000000);
+}
+
+.ImagenBienvenidos img{
+  border-radius: 90%;
+}
+
+.TextoBienvenidos{
+  width: 50%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Historia{
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* Gradient */
+  background: #7afffc; /* Old browsers */
+  background: -moz-linear-gradient(top,  #7afffc 0%, #62cbfc 44%, #43bdf9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7afffc', endColorstr='#43bdf9',GradientType=0 ); /* IE6-9 */
+
+}
+
+.Historia p{
+ font-size: 0.8em;
+}
+
+.Historia h3{
+  color: #090997;
+}
+
+.Personas{
+  overflow: hidden;
+  
+}
+
+.Persona{
+  width: 30%;
+  height: 100%;
+  border: 1px solid var(--ColorFav);
+  border-radius: 0.25em;
+  float: left;
+  margin-left: 2.25%;
+  box-sizing: border-box;
+  text-align: center;
+  transition:all 0.8s ease;   
+  /* Gradiente*/
+  background: #87e0fd; /* Old browsers */
+  background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #06a9db 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#06a9db',GradientType=0 ); /* IE6-9 */
+
+}
+
+.Persona:hover{
+ /* Gradiente*/
+background: #7afffc; /* Old browsers */
+background: -moz-linear-gradient(top,  #7afffc 0%, #62cbfc 44%, #43bdf9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7afffc', endColorstr='#43bdf9',GradientType=0 ); /* IE6-9 */
+
+}
+
+.Persona:hover img{
+  -webkit-transform:scale(1.1);transform:scale(1.1);
+}
+.Persona img{
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  margin: 0.8em 0 1em;
+  max-width: 70%;
+}
+
+.Persona h5,
+.Persona h6{
+  text-align: center;
+  font-weight: normal;
+  color: #000000;
+  margin: 0;
+}
+.Persona h5{
+  font-size: 0.9em;
+  
+}
+
+.Persona h6{
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.Persona p{
+  font-size: 0.7em;
+  color: rgb(14, 9, 20);
+  margin: 0 1em 1em;
+}
+
+.staff{
+  padding: 10px;
+  color: #090997;
+}
+
+.Servicio{
+  width: 98%;
+  border: 1px solid var(--ColorFav);
+  border-radius: 0.7em;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 1em;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* Gradiente*/
+  background: #87e0fd; /* Old browsers */
+  background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #06a9db 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#06a9db',GradientType=0 ); /* IE6-9 */
+
+}
+
+.Servicio:hover{
+  /* Gradiente*/
+background: #7afffc; /* Old browsers */
+background: -moz-linear-gradient(top,  #7afffc 0%, #62cbfc 44%, #43bdf9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7afffc', endColorstr='#43bdf9',GradientType=0 ); /* IE6-9 */
+
+}
+
+.Servicio .Info{
+  width: 74%;
+ 
+box-sizing: border-box;
+}
+
+.Servicio .ImagenServicio{
+  width: 24%;
+  box-sizing: border-box;
+}
+
+.Servicio .Info h4{
+  color: #2e64a1;
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0 0 1em;
+  border-bottom: 1px solid #2e64a1;
+  box-sizing: border-box;
+}
+
+.Servicio .Info p{
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+
+.Servicio img{
+  border-radius: 0.8em;
+  width: 100%;
+  filter: drop-shadow(-12px 14px 9px #000000);
+  -webkit-filter: drop-shadow(-12px 14px 9px #000000);
+  -moz-filter: drop-shadow(-12px 14px 9px #000000);
+  box-sizing: border-box;
+}
+
+ .Servicio:nth-child(even) .ImagenServicio{
+  float: right;
+  box-sizing: border-box;
+}
+
+.Servicio:nth-child(even) .Info{
+  float:left ;
+}
+
+.Servicio:nth-child(odd) .ImagenServicio{
+  float: left;
+   box-sizing: border-box;
+}
+
+.Servicio:nth-child(odd) .Info{
+  float: right;
+} 
+
+/* Galería de Fotos */
+
+
+
+.galeria .foto{
+  width: 28%;
+  
+  float: left;
+  border: 1px solid blue;
+  /* padding: 0.3em; */
+  margin: 2% 0 3% 4%;
+  box-sizing: border-box;
+  transition:all 0.3s ease; 
+   text-align: center;
+}
+
+.galeria .foto:nth-child(5n+1){
+  margin-bottom: 6%;
+}
+
+.galeria .foto img{
+  width: 100%;
+  /* Para que ocupe toda la caja */
+  display: block;
+}
+
+.galeria .Descripcion{
+  display: none;
+  position: absolute;
+  color: #12125e;
+  padding: 5px;
+ 
+  font-weight: 600;
+  animation-name: MiAnimacion;
+     animation-duration: 0.5s; 
+}
+
+@keyframes MiAnimacion {
+    from {transform: translateY(-80px);
+      transform:scale(10%);
+      }
+    to {transform: translateY(-80px);
+      transform: scale(100%);
+      }
+}
+
+.foto:hover{
+ box-shadow: -1px 2px 34px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 2px 34px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 34px 0px rgba(0,0,0,0.75);
+filter: saturate(213%);
+-webkit-filter: saturate(213%);
+-moz-filter: saturate(213%);
+
+}
+
+
+.foto:hover .Descripcion {
+  display: block;
+}
+
+.galeria h3{
+  color: #090997;
+}
+
+/* NOVEDADES*/
+
+.Novedades{
+  text-align: left;
+  padding: 15px;
+  
+  /* Gradiente*/
+  background: #87e0fd; /* Old browsers */
+  background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #06a9db 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#06a9db',GradientType=0 ); /* IE6-9 */
+
+}
+
+.Novedad{
+   border-bottom: 2px blue solid;
+   padding: 5px;
+   transition:all 0.6s ease; 
+}
+
+.Novedades .Novedad:first-child{
+  border-top:2px blue solid ;
+}
+
+.Novedad:hover{
+  /* Gradiente*/
+background: #7afffc; /* Old browsers */
+background: -moz-linear-gradient(top,  #7afffc 0%, #62cbfc 44%, #43bdf9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7afffc', endColorstr='#43bdf9',GradientType=0 ); /* IE6-9 */
+/* Shadow */
+box-shadow: 3px 2px 26px 6px rgba(0,0,0,0.75);
+-webkit-box-shadow: 3px 2px 26px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 2px 26px 6px rgba(0,0,0,0.75);
+}
+
+/* FORMULARIO */
+
+.formulario{
+  width:50%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: left;
+  float: left;
+}
+
+.formulario h3{
+  margin-left: 40%;
+}
+
+.formulario label{
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+  margin: 15px;
+  font-size: 0.9em;
+  margin-right: 30px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select{
+  
+  background-color: #43bdf9;
+  border-radius: 5px;
+  border: 1px solid blue;
+  padding: 0.4em 0.6em;
+  font-size: 0.9em;
+  width: 60%;
+}
+
+.formulario select{
+  width: auto;
+}
+.formulario .boton{
+  text-align: center;
+  margin-top: 15px;
+  
+}
+.formulario .btn-enviar{
+width: auto;
+
+cursor: pointer;
+color: white;
+font-weight: 700;
+transition:all 0.6s ease; 
+/* Gradiente de la barra de navegacion*/
+    background: #090997; /* Old browsers */
+    background: -moz-linear-gradient(top,  #090997 0%, #00dddd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #090997 0%,#00dddd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #090997 0%,#00dddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090997', endColorstr='#00dddd',GradientType=0 ); /* IE6-9 */
+}
+
+.formulario .btn-enviar:hover{
+  color: #000000;
+   
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+    text-shadow: none;
+    /* Sombra de los botones */
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+  /* Gradiente */
+    background: #73f8f1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #73f8f1 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #73f8f1 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #73f8f1 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73f8f1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.formulario textarea{
+  height: 10em;
+  resize: none;
+}
+
+.infoContacto{
+width: 50%;
+box-sizing: border-box;
+float: left;
+
+text-align: center;
+padding: 10px;
+
+}
+
+.infoContacto p{
+  padding: 10px;
+  font-size: 0.8em;
+ 
+}
+
+.card{
+  width:fit-content;
+  margin-top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid blue;
+  border-radius: 10px;
+  /* Gradiente*/
+background: #7afffc; /* Old browsers */
+background: -moz-linear-gradient(top,  #7afffc 0%, #62cbfc 44%, #43bdf9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #7afffc 0%,#62cbfc 44%,#43bdf9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7afffc', endColorstr='#43bdf9',GradientType=0 ); /* IE6-9 */
+/* Shadow */
+box-shadow: 3px 2px 26px 6px rgba(0,0,0,0.75);
+-webkit-box-shadow: 3px 2px 26px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 2px 26px 6px rgba(0,0,0,0.75);
+}
+
+
+/* LOGIN */
+.CajaLogin{
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+  border: solid black 2px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #12125e;
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+}
+
+.CajaLogin .login h3{
+  color:white;
+  font-size:medium;
+}
+
+.CajaLogin .login a{
+  text-decoration: none;
+  margin-bottom: 25px;
+  font-size: small;
+}
+.login{
+  width: 100%;
+}
+
+.login .campo{
+  margin-bottom: 20px;
+}
+
+.login label{
+  color:#62cbfc;
+}
+
+.login .boton{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+
+.login .btn-enviar{
+padding: 5px;
+width: auto;
+cursor: pointer;
+color: white;
+border-radius: 10px;
+font-weight: 700;
+transition:all 0.6s ease; 
+/* Gradiente de la barra de navegacion*/
+    background: #090997; /* Old browsers */
+    background: -moz-linear-gradient(top,  #090997 0%, #00dddd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #090997 0%,#00dddd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #090997 0%,#00dddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090997', endColorstr='#00dddd',GradientType=0 ); /* IE6-9 */
+}
+
+.login .btn-enviar:hover{
+  color: #000000;
+   
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+    text-shadow: none;
+    /* Sombra de los botones */
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+  /* Gradiente */
+    background: #73f8f1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #73f8f1 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #73f8f1 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #73f8f1 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73f8f1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.login textarea{
+  height: 10em;
+  resize: none;
+  
+}
+
+.login input{
+background-color: #43bdf9;
+  border-radius: 5px;
+  border: 1px solid blue;
+  padding: 0.4em 0.6em;
+  font-size: 0.9em;
+  width: 60%;
+}
+
+.nota{
+  width: 300px;
+  background-color: #2e64a1;
+  margin: 0 auto;
+  padding: 5px;
+  border: solid black 2px;
+  margin-top: 15px;
+  border-radius: 10px 10px 10px 10px;
+  font-size: small;
+}
+
+
+
+/* ************************************************************** */
+/* MEDIA QUERIES *************************************************/
+
+@media screen and (max-width: 799px){
+
+.formulario{
+  width: 55%;
+}
+
+.infoContacto{
+width: 45%;}
+
+.galeria .foto{
+  width: 45%;
+box-sizing: border-box;
+margin: 2% 0 2% 3%;
+}
+
+.galeria .foto:nth-child(n+1){
+  margin-bottom: 6%;
+  
+}
+
+/* El contenido lo ajusto al 100% */
+#Contenido{
+    width: 100%;
+}
+
+/* Pantallas mas chicas */ 
+/* menos de 700px ya se tiene que mostrar el dropdown menu porque la botonera no entra*/
+}
+@media screen and (max-width: 700px){
+
+  .formulario{
+  width: 100%;
+}
+
+.infoContacto{
+width: 100%;
+text-align: center;
+}
+.infoContacto .card{
+  margin-top:auto;
+}
+  /* Dropdown Content (oculto por defecto) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--ColorFav);
+  border: solid black 2px;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  animation-duration: 0.2s;
+  animation-name: slidein;
+  background: #090997; /* Old browsers */
+  background: -moz-linear-gradient(top,  #090997 0%, #00dddd 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #090997 0%,#00dddd 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #090997 0%,#00dddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090997', endColorstr='#00dddd',GradientType=0 ); /* IE6-9 */
+}
+
+/*Animacion del dropdown menu*/
+@keyframes slidein {
+  from {
+    margin-left: -100px;   
+  }
+  to {
+   margin-left: 0;
+  }
+}
+
+/* El contenido lo ajusto al 100% */
+#Contenido{
+    width: 100%;
+}
+
+header{
+  height: 50px;
+}
+header img.Logo{
+  width: 70px;
+}
+
+header h1{
+
+  font-size: 2em;
+ 
+}
+
+nav{
+    text-align: left;
+}
+nav a:hover{
+    padding: 5px;
+    padding-left: 15px;
+    background-color: rgb(115, 248, 241);
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+    /* Sombra de los botones */
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+
+}
+
+/* Style del Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  display: block;
+  
+}
+
+/* contenedor del dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;  
+}
+
+/* Links adentro del dropdown */
+.dropdown-content a {
+  padding: 4px 8px;
+  text-decoration: none; 
+  display: block;
+}
+
+
+/* Muestra el dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;  
+}
+
+}
+
+/* menos de 600 px acomodo algunas cajas para que ocupen el 100% */
+@media screen and (max-width: 600px){
+
+  .formulario{
+  width: 100%;
+  float: none;
+  margin-bottom: 0;
+}
+
+.infoContacto{
+  
+  float:none;
+width: auto}
+
+.formulario input,
+.formulario textarea
+{
+  
+  
+  width: 90%;
+}
+
+.formulario label{
+  width: 90%;
+}
+
+.infoContacto .card{
+  margin-top:auto;
+}
+  .galeria .foto{
+  width: 95%;
+box-sizing: border-box;
+margin: 2% 0 4% 3%;}
+
+  .Persona{
+    width: 96%;
+    margin-bottom: 15px;
+    margin-top: 15pxS;
+  }
+  .Servicio .ImagenServicio{
+    width: 100%;
+
+  }
+
+  .Servicio .Info{
+    width: 100%;
+  }
+
+   .Bienvenidos{
+    display: block;
+  }
+  
+  .ImagenBienvenidos{
+    width: 100%;
+  }
+  .TextoBienvenidos{width: 100%;}
+}
+
+
+

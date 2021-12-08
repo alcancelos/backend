@@ -1,0 +1,47 @@
+{{#if conocido}}
+<div class="CajaLogin">
+    <div class="login">
+        <h3>Bienvenido {{nombre}} !!</h3>
+        <div class="boton">
+            <a href="/salir" class="btn-enviar">Cerrar Sesión</a>
+        </div>
+    </div>
+
+</div>
+
+{{/if}}
+
+{{#unless conocido}}
+<div class="nota">
+<p>Utilizar las siguientes credenciales:</p>
+<div>Usuario: admin</div>
+<div>Contraseña: admin</div>
+<p> o....</p>
+<div>Usuario: user</div>
+<div>Contraseña: user</div>
+<p>(O poner cualquier cosa para ver pagina de error)</p>
+</div>
+
+
+<div class="CajaLogin">
+    <div class="login">
+        <h3>Ingrese el nombre de usuario y Contraseña</h3>
+        <form method="post" action="/ingresar">
+            <div class="campo">
+                <label for="name">Usuario: </label>
+                <input type="text" id="name" name="usuario" value="" placeholder="Usuario" required="required"
+                    autofocus />
+            </div>
+            <div class="campo">
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass" value="" placeholder="Contraseña"
+                    required="required" />
+            </div>
+
+            <div class="boton">
+                <input type="submit" value="enviar" class="btn-enviar" />
+            </div>
+        </form>
+    </div>
+</div>
+{{/unless}}
