@@ -49,27 +49,34 @@ app.post('/ingresar', function (req, res) {
       password: 'user'
     }
   ];
+  //Declaro una variable para saber cuando está logueado con exito
   logueado = false;
+  //Recorro los usuarios y me fijo que coincida logon y contraseña
   usuarios.forEach(element => {
     if (element.logon == req.body.usuario && element.password == req.body.pass) {
+      //si coincido guardo el nombre del usuario en la variable de sesion
       req.session.nombre = element.nombre;
+      //cambio logueado a true
       logueado = true;
-
     }
   });
+  //Si se logueó correctamente redirecciono a login, donde detecta que la variable de sesion nombre
+  //tiene contenido y muestra un mensaje de bienvenida en vez del login
   if (logueado) {
     res.redirect('/admin/login')
-  } else {
+  }
+  //Caso contrario redirecciono a una pagina de error que me dice que el nombre de usuario
+  //o contraseña están mal ingresados. 
+  else {
     res.redirect('admin/error')
   }
-
 });
 
+//Cierra la sesion, borra las variables de sesion y redirecciona al login
+//donde muestra la pantalla para iniciar sesion
 app.get('/salir', function (req, res) {
-
   req.session.destroy();
   res.redirect('/admin/login');
-
 })
 
 // catch 404 and forward to error handler
