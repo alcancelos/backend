@@ -50,9 +50,9 @@ pool.query("select * from usuario").then(function (result) {
 // var id = 2;
 // var obj = {
 //   nombre: 'Pablo',
-//   apellido: 'Rodriguez'
+//   apellido: 'Rodruiguez'
 // }
-// pool.query("update usuario set ?", [obj, id]).then(function (result) {
+// pool.query("update usuario set ? where id_usuario=?", [obj, id]).then(function (result) {
 //   console.log(result);
 // });
 
