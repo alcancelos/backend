@@ -3,6 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+require('dotenv').config();
+var pool = require('./models/bd');
+
+
 //uso la session
 const session = require('express-session');
 
@@ -22,6 +27,41 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Select
+pool.query("select * from usuario").then(function (result) {
+  console.log(result);
+});
+
+//insert
+
+// var obj = {
+//   nombre: 'Francisco',
+//   apellido: "Cancelos",
+//   email: 'francancelos@gmail.com',
+//   logon: 'user',
+//   password: 'user'
+// }
+// pool.query("insert into usuario set ?", [obj]).then(function (result) {
+//   console.log(result);
+// });
+
+//update
+
+// var id = 2;
+// var obj = {
+//   nombre: 'Pablo',
+//   apellido: 'Rodriguez'
+// }
+// pool.query("update usuario set ?", [obj, id]).then(function (result) {
+//   console.log(result);
+// });
+
+//borrar
+// var id = 2;
+
+// pool.query("delete from usuario where id_usuario= ?", [id]).then(function (result) {
+//   console.log(result);
+// });
 
 //configuro la clave secreta
 app.use(session({
@@ -38,6 +78,13 @@ app.use('/admin/error', errorRouter);
 app.post('/ingresar', function (req, res) {
   ///hago un arreglo de objetos de usuario solo para probar
   //Esto se supone que está en la BD
+
+
+
+
+
+
+
   var usuarios = [
     {
       nombre: 'Alejandro Martín Cancelos',
