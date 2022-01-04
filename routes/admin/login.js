@@ -10,6 +10,7 @@ router.post('/', async (req, res, next) => {
         var data = await usuariosModel.getUserByUsernameAndPassword(usuario, password);
 
         if (data != undefined) {
+            //paso el id y el nompbre y el apellido del usuario
             req.session.id_usuario = data.id_usuario;
             req.session.nombre = data.nombre;
             req.session.apellido = data.apellido;
@@ -35,6 +36,7 @@ router.get('/', function (req, res, next) {
     );
 });
 
+//uso el /salir del app.js pero lo dejo por las dudas
 router.get('/logout', function (req, res, next) {
     req.session.destroy();
     res.render('admin/login', {
