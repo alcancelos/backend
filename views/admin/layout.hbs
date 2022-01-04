@@ -17,6 +17,20 @@
             <img class="Logo" src="../images/LogoBlanco.png" alt="Op">
             <h1>Jurídico Contable</h1>
         </header>
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fas fa-bars"></i></button>
+            <div class="dropdown-content">
+                {{#if Logueado}}
+    
+                    <a href="/salir">Cerrar Sesión</a>
+                {{/if}}
+                {{#unless Logueado}}
+                    <a href="/admin/login">Ingresar</a>
+                {{/unless}}
+            </div>
+        </div>
+    </nav>
         
         {{{body}}}
         <footer>

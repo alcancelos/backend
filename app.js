@@ -14,8 +14,23 @@ const session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
+
 var errorRouter = require('./routes/admin/error');
+var novedadesRouter = require('./routes/admin/novedades');
 var app = express();
+
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect('/admin/login');
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,42 +41,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-//Select
-pool.query("select * from usuario").then(function (result) {
-  console.log(result);
-});
-
-//insert
-
-// var obj = {
-//   nombre: 'Francisco',
-//   apellido: "Cancelos",
-//   email: 'francancelos@gmail.com',
-//   logon: 'user',
-//   password: 'user'
-// }
-// pool.query("insert into usuario set ?", [obj]).then(function (result) {
-//   console.log(result);
-// });
-
-//update
-
-// var id = 2;
-// var obj = {
-//   nombre: 'Pablo',
-//   apellido: 'Rodruiguez'
-// }
-// pool.query("update usuario set ? where id_usuario=?", [obj, id]).then(function (result) {
-//   console.log(result);
-// });
-
-//borrar
-// var id = 2;
-
-// pool.query("delete from usuario where id_usuario= ?", [id]).then(function (result) {
-//   console.log(result);
-// });
 
 //configuro la clave secreta
 app.use(session({
@@ -74,50 +53,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/error', errorRouter);
-
-app.post('/ingresar', function (req, res) {
-  ///hago un arreglo de objetos de usuario solo para probar
-  //Esto se supone que está en la BD
-
-
-
-
-
-
-
-  var usuarios = [
-    {
-      nombre: 'Alejandro Martín Cancelos',
-      logon: 'admin',
-      password: 'admin'
-    }, {
-      nombre: 'Francisco Pablo Cancelos',
-      logon: 'user',
-      password: 'user'
-    }
-  ];
-  //Declaro una variable para saber cuando está logueado con exito
-  logueado = false;
-  //Recorro los usuarios y me fijo que coincida logon y contraseña
-  usuarios.forEach(element => {
-    if (element.logon == req.body.usuario && element.password == req.body.pass) {
-      //si coincido guardo el nombre del usuario en la variable de sesion
-      req.session.nombre = element.nombre;
-      //cambio logueado a true
-      logueado = true;
-    }
-  });
-  //Si se logueó correctamente redirecciono a login, donde detecta que la variable de sesion nombre
-  //tiene contenido y muestra un mensaje de bienvenida en vez del login
-  if (logueado) {
-    res.redirect('/admin/login')
-  }
-  //Caso contrario redirecciono a una pagina de error que me dice que el nombre de usuario
-  //o contraseña están mal ingresados. 
-  else {
-    res.redirect('admin/error')
-  }
-});
+app.use('/admin/novedades', secured, novedadesRouter);
 
 //Cierra la sesion, borra las variables de sesion y redirecciona al login
 //donde muestra la pantalla para iniciar sesion
