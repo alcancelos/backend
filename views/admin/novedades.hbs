@@ -8,12 +8,36 @@
         </div>
     </div>
 </nav>
-
-<div class="nota-bienvenido">
-    <p class="text-right">Bienvenido/a {{nombre}} {{apellido}} !!</p>   
-</div>
-<div class="login">
-    <div class="boton">
-        <a href="/salir" class="btn-enviar">Cerrar Sesión <i class="fa fa-sign-out"></i></a>
+<main>
+    <div class="nota-bienvenido">
+        <p class="text-right">Bienvenido/a {{nombre}} {{apellido}} !!</p>
     </div>
-</div>
+    <div class="login">
+        <div class="boton">
+            {{!-- <a href="/salir" class="btn-enviar">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></a> --}}
+            <h3>Listado de Novedades</h3>
+           
+        </div>
+    </div>
+    
+
+    <div class="Novedades">
+        <div class="boton">
+            <a href="/admin/novedades/agregar" class="btnBlue">Nueva Novedad <i class="fa fa-plus"></i></a>
+        </div>
+    
+        {{#each novedades}}
+        <div class="Novedad">
+            <h3>{{titulo}}</h3>
+            <div class="boton">
+                <a href="/admin/novedades" class="btnGreen">Modificar <i class="fa fa-plus"></i></a>
+            </div>
+            <div class="boton">
+                <a href="/admin/novedades" class="btnRed">Borrar <i class="fa fa-plus"></i></a>
+            </div>
+            <h4>{{dateFormat fecha "DD/MM/YY"}}</h4>
+            <p>{{contenido}}</p>
+        </div>
+        {{/each}}
+    </div>
+</main>

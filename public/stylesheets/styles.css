@@ -438,19 +438,21 @@ filter: saturate(213%);
 .Novedades{
   text-align: left;
   padding: 15px;
-  
+ 
   /* Gradiente*/
-  background: #87e0fd; /* Old browsers */
-  background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #06a9db 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#06a9db',GradientType=0 ); /* IE6-9 */
+  background: #87e0fd; 
+  background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #06a9db 100%); 
+  background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%); 
+  background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#06a9db 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#06a9db',GradientType=0 ); 
 
 }
 
+
+
 .Novedad{
    border-bottom: 2px blue solid;
-   padding: 5px;
+   padding: 15px;
    transition:all 0.6s ease; 
 }
 
@@ -629,9 +631,136 @@ box-shadow: 3px 2px 26px 6px rgba(0,0,0,0.75);
   text-align: center;
   margin-top: 15px;
   margin-bottom: 20px;
+ 
+}
+a{
+  text-decoration:dashed;
 }
 
+.Novedades .boton{
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.Novedades .boton .btnBlue{
+  padding: 5px;
+width: 150px;
 
+font-size: small;
+cursor: pointer;
+color: white;
+border: 1px solid;
+border-radius: 10px;
+border-color: #000000;
+font-weight: 700;
+transition:all 0.6s ease; 
+/* Gradiente de la barra de navegacion*/
+    background: #090997; /* Old browsers */
+    background: -moz-linear-gradient(top,  #090997 0%, #00dddd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #090997 0%,#00dddd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #090997 0%,#00dddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090997', endColorstr='#00dddd',GradientType=0 ); /* IE6-9 */
+}
+
+.Novedades .btnBlue:hover{
+  color: #000000;
+   
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+    text-shadow: none;
+    /* Sombra de los botones */
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+  /* Gradiente */
+    background: #73f8f1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #73f8f1 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #73f8f1 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #73f8f1 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73f8f1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.Novedades .boton .btnGreen{
+  padding: 5px;
+width: 150px;
+
+font-size: small;
+cursor: pointer;
+color: white;
+border: 1px solid;
+border-radius: 10px;
+border-color: #000000;
+font-weight: 700;
+transition:all 0.6s ease; 
+/* Gradiente de la barra de navegacion*/
+    background: #137001; /* Old browsers */
+    background: -moz-linear-gradient(top,  #137001 0%, #9cebc4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #137001 0%,#9cebc4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #137001 0%,#9cebc4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090997', endColorstr='#00dddd',GradientType=0 ); /* IE6-9 */
+}
+
+.Novedades .btnGreen:hover{
+  color: #000000;
+   
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+    text-shadow: none;
+    /* Sombra de los botones */
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+  /* Gradiente */
+    background: #73f8f1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #73f8f1 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #73f8f1 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #73f8f1 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73f8f1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.Novedades .boton .btnRed{
+  padding: 5px;
+width: 150px;
+
+font-size: small;
+cursor: pointer;
+color: white;
+border: 1px solid;
+border-radius: 10px;
+border-color: #000000;
+font-weight: 700;
+transition:all 0.6s ease; 
+/* Gradiente de la barra de navegacion*/
+    background: #c50000; /* Old browsers */
+    background: -moz-linear-gradient(top,  #c50000 0%, #e6baba 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #c50000 0%,#e6baba 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #c50000 0%,#e6baba 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090997', endColorstr='#00dddd',GradientType=0 ); /* IE6-9 */
+}
+
+.Novedades .btnRed:hover{
+  color: #000000;
+   
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+    text-shadow: none;
+    /* Sombra de los botones */
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+  /* Gradiente */
+    background: #73f8f1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #73f8f1 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #73f8f1 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #73f8f1 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73f8f1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
 .login .btn-enviar{
 padding: 5px;
 width: auto;
