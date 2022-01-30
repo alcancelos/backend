@@ -23,17 +23,19 @@
 
     <div class="Novedades">
         <div class="boton">
-            <a href="/admin/novedades/agregar" class="btnBlue">Nueva Novedad <i class="fa fa-plus"></i></a>
+            <a href="/admin/novedades/agregar" class="btnBlue"><i class="fa fa-plus"></i> Nueva Novedad </a>
         </div>
     
         {{#each novedades}}
         <div class="Novedad">
             <h3>{{titulo}}</h3>
+            <div class="botonera">
             <div class="boton">
-                <a href="/admin/novedades" class="btnGreen">Modificar <i class="fa fa-plus"></i></a>
+                <a href="/admin/novedades" class="btnGreen"><i class="fas fa-pencil-alt"></i></a>
             </div>
             <div class="boton">
-                <a href="/admin/novedades" class="btnRed">Borrar <i class="fa fa-plus"></i></a>
+                <a href="/admin/novedades" class="btnRed"><i class="fa fa-trash"></i></a>
+            </div>
             </div>
             <h4>{{dateFormat fecha "DD/MM/YY"}}</h4>
             <p>{{contenido}}</p>
