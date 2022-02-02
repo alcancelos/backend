@@ -2,7 +2,7 @@ const router = require('../routes/admin/novedades');
 var pool = require('./bd');
 
 async function getNovedades() {
-    var query = "select * from novedad order by id_novedad desc";
+    var query = "select * from novedad order by fecha desc";
     var rows = await pool.query(query);
     return rows;
 }
