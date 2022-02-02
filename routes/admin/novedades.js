@@ -4,6 +4,7 @@ var novedadesModel = require('./../../models/novedadesModel');
 
 var hbs = require('hbs');
 hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
+var moment = require('moment');
 
 
 router.get('/', async function (req, res, next) {
@@ -49,5 +50,40 @@ router.get('/eliminar/:id', async (req, res, next) => {
     res.redirect('/admin/novedades')
 });
 
+router.get('/modificar/:id', async (req, res, next) => {
+    let id = req.params.id;
+    let novedad = await novedadesModel.getNovedadById(id);
+
+    var fecha = moment(novedad.fecha).format('YYYY-MM-DD');
+
+    res.render('admin/modificar', {
+        layout: 'admin/layout',
+        novedad,
+        fecha
+
+    });
+});
+
+router.post('/modificar', async (req, res, next) => {
+    try {
+        let obj = {
+            titulo: req.body.titulo,
+            fecha: req.body.fecha,
+            contenido: req.body.contenido
+        }
+
+        await novedadesModel.modificarNovedadById(obj, req.body.id);
+        res.redirect('/admin/novedades');
+    }
+    catch (error) {
+        console.log(error)
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error: true, message: "No se modificó la novedad"
+
+
+        })
+    }
+})
 
 module.exports = router;

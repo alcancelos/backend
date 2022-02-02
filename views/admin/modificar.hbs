@@ -1,0 +1,41 @@
+<nav>
+    <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-bars"></i></button>
+        <div class="dropdown-content">
+            <a href="/salir">Cerrar Sesión</a>
+            <a href="/admin/novedades">Novedades</a>
+        </div>
+    </div>
+</nav>
+{{#if error}}
+    <div class="nota-error">
+        <p> {{message}}</p>
+    </div>
+
+{{/if}}
+
+<div class="CajaLogin">
+    <div class="login">
+        <h3>Nueva Novedad</h3>
+        <form method="post" action="/admin/novedades/modificar">
+            <input type="hidden" value="{{novedad.id_novedad}}" name="id">
+            <div class="campo">
+                <label for="name">Titulo </label>
+                <input type="text" id="name" name="titulo" value="{{novedad.titulo}}" placeholder="Título" required="required"/>
+            </div>
+            <div class="campo">
+                <label for="date">Fecha </label>
+                <input type="date" id="date" name="fecha" value="{{fecha}}" required="required" />
+            </div>
+            <label>Contenido </label>
+            <div class="campo">
+
+                <textarea type="text" id="contenido" name="contenido"  required="required">{{novedad.contenido}}</textarea>
+            </div>
+
+            <div class="boton">
+                <input type="submit" value="modificar" class="btn-enviar" />
+            </div>
+        </form>
+    </div>
+</div>
