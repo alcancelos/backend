@@ -16,7 +16,7 @@
 
 <div class="CajaLogin">
     <div class="login">
-        <h3>Nueva Novedad</h3>
+        <h3>Modificar Novedad</h3>
         <form method="post" action="/admin/novedades/modificar" enctype="multipart/form-data">
             <input type="hidden" value="{{novedad.id_novedad}}" name="id">
             <div class="campo">
@@ -28,12 +28,17 @@
                 <input type="date" id="date" name="fecha" value="{{fecha}}" required="required" />
             </div>
             <label>Contenido </label>
+            </p>
             <div class="campo">
 
-                <textarea type="text" id="contenido" name="contenido"  required="required">{{novedad.contenido}}</textarea>
+                <textarea type="text" id="contenido" name="contenido" rows="50" cols="40" required="required">{{novedad.contenido}} </textarea>
             </div>
-            <label>Imagen: <input type="file" name="imagen" id="imagen"/></label>
-            <label><input type="checkbox" name="img_delete" id="img_delete" value="1">Eliminar imagen actual?</label>
+            <div class="file">
+                <label>Imagen: <input type="file" name="imagen" id="imagen"/></label>
+            <label>Eliminar imagen actual?<input type="checkbox" name="img_delete" id="img_delete" value="1"></label>
+
+            </div>
+            
             <input type="hidden" name="img_original" value="{{novedad.img_id}}">
 
 

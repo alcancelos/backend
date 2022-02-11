@@ -819,6 +819,14 @@ background-color: #43bdf9;
   width: 60%;
 }
 
+.login .file input{
+  background-color: #12125e;
+  border: 0px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: auto;
+}
+
 .nota{
   width: 300px;
   background-color: #2e64a1;
