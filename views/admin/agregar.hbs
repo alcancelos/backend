@@ -17,7 +17,7 @@
 <div class="CajaLogin">
     <div class="login">
         <h3>Nueva Novedad</h3>
-        <form method="post" action="/admin/novedades/agregar">
+        <form method="post" action="/admin/novedades/agregar" enctype="multipart/form-data">
             <div class="campo">
                 <label for="name">Titulo </label>
                 <input type="text" id="name" name="titulo" value="" placeholder="Título" required="required"
@@ -30,7 +30,7 @@
             </div>
             <label >Contenido </label>
             <div class="campo">
-                
+                <label>Imagen:<input type="file" name="imagen" id="imagen" /></label>
                 <textarea type="text" id="contenido" name="contenido" value="" required="required"></textarea>
             </div>
 

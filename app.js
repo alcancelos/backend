@@ -11,6 +11,8 @@ var pool = require('./models/bd');
 //uso la session
 const session = require('express-session');
 
+var fileupload = require('express-fileupload');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
@@ -35,6 +37,11 @@ secured = async (req, res, next) => {
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+app.use(fileupload({
+  useTempFiles: true,
+  tempFileDir: '/tmp'
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
