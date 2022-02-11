@@ -7,6 +7,7 @@ var logger = require('morgan');
 require('dotenv').config();
 var pool = require('./models/bd');
 
+var cors = require('cors');
 
 //uso la session
 const session = require('express-session');
@@ -19,6 +20,7 @@ var loginRouter = require('./routes/admin/login');
 
 var errorRouter = require('./routes/admin/error');
 var novedadesRouter = require('./routes/admin/novedades');
+var apiRouter = require('./routes/api');
 var app = express();
 
 secured = async (req, res, next) => {
@@ -62,6 +64,7 @@ app.use('/admin/login', loginRouter);
 app.use('/admin/error', errorRouter);
 app.use('/admin/novedades', secured, novedadesRouter);
 
+app.use('/api', cors(), apiRouter);
 //Cierra la sesion, borra las variables de sesion y redirecciona al login
 //donde muestra la pantalla para iniciar sesion
 app.get('/salir', function (req, res) {
