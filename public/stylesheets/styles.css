@@ -825,6 +825,11 @@ background-color: #43bdf9;
   margin-bottom: 5px;
   margin-top: 5px;
   width: auto;
+  
+}
+
+.login .file{
+  font-size: smaller;
 }
 
 .nota{
@@ -1009,6 +1014,10 @@ nav a:hover{
 
 /* menos de 600 px acomodo algunas cajas para que ocupen el 100% */
 @media screen and (max-width: 600px){
+
+  .CajaLogin{
+    
+    width: 300px}
 
   .formulario{
   width: 100%;
